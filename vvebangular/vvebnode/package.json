@@ -1,0 +1,36 @@
+{
+  "name": "vendorportal",
+  "version": "1.0.0",
+  "description": "mean stack vendor portal app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "barc": "0.0.4",
+    "barcode-generator": "^0.1.0",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "canvas": "^2.4.1",
+    "convert-csv-to-json": "0.0.14",
+    "cors": "*",
+    "cryptr": "^4.0.2",
+    "csv": "^5.1.1",
+    "csv-parse": "^4.3.4",
+    "csvjson": "^5.1.0",
+    "csvtojson": "^2.0.8",
+    "express": "*",
+    "jsbarcode": "^3.11.0",
+    "jsonwebtoken": "*",
+    "md5": "^2.2.1",
+    "mongoose": "*",
+    "nodemon": "^1.18.10",
+    "passport": "*",
+    "passport-jwt": "*",
+    "request": "^2.88.0",
+    "reverse-md5": "0.0.4",
+    "scramjet": "^4.22.1"
+  },
+  "author": "Zencon",
+  "license": "ISC"
+}
