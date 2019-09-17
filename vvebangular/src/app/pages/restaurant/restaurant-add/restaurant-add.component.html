@@ -1,0 +1,99 @@
+
+
+<div class="modal-header">
+  <h4 class="modal-title">Add Restaurant</h4>
+  <button type="button" class="close"  (click)="bsModalRef.hide()" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<div class="row">
+  <div class="col-md-12">
+    <form class="form-horizontal" #menuForm="ngForm">
+      <div class="form-group row">
+       
+        <label class="col-md-3 col-form-label" for="text-input"><b>Restaurant Name:</b></label>
+        <div class="col-md-3">
+          <input type="text" name="dcn" class="form-control"  required  [(ngModel)]="detail.rest_name" >
+        </div>
+        <label class="col-md-3 col-form-label" for="text-input"><b> City:</b></label>
+        <div class="col-md-3">
+          <input type="text" name="dcn" class="form-control"  required  [(ngModel)]="detail.rest_city" >
+        </div>
+      </div>
+      <div class="form-group row">
+        
+        <label class="col-md-3 col-form-label" for="text-input"><b>State:</b></label>
+        <div class="col-md-3">
+          <input type="text" name="dcn" class="form-control"  required  [(ngModel)]="detail.rest_state" >
+        </div>
+      </div>
+        <!-- <div class="col-md-3">
+         
+          <input required type="text" placeholder="Select Date" name="year" class="form-control" bsDatepicker
+          [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', containerClass: 'theme-blue' }" 
+          [(ngModel)]="delsch.DelDocDt" (keypress)="KeyPress($event)">
+        </div> -->
+     
+
+
+      <!-- <div class="form-group row">
+        <label class="col-md-3 col-form-label" for="text-input"><b>Dellivery Qty:</b></label>
+        <div class="col-md-3">
+          
+          <input  type="number" name="delqty" class="form-control"  required   [(ngModel)]="delsch.DItemQty">
+        </div>
+        <label class="col-md-3 col-form-label" for="text-input"><b>Vehicle No:</b></label>
+        <div class="col-md-3">
+          <input  type="text" name="vehno" class="form-control"  required   [(ngModel)]="delsch.DelVehNo" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label" for="text-input"><b>Material Number:</b></label>
+        <div class="col-md-3">
+          <input disabled type="number" name="matnr" class="form-control"  required   [(ngModel)]="delsch.matnr" >
+        </div>
+        <label class="col-md-3 col-form-label" for="text-input"><b>Description:</b></label>
+        <div class="col-md-3">
+          <input disabled type="text" name="desc" class="form-control"  required   [(ngModel)]="delsch.txz01" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label" for="text-input"><b>Purchase Order No:</b></label>
+        <div class="col-md-3">
+          <input disabled type="text" name="pon" class="form-control"  required   [(ngModel)]="delsch.ebeln" >
+        </div>
+        <label class="col-md-3 col-form-label" for="text-input"><b>PO Item:</b></label>
+        <div class="col-md-3">
+          <input disabled type="text" name="poitem" class="form-control"  required   [(ngModel)]="delsch.ebelp" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label" for="text-input"><b>Delivery Plant:</b></label>
+        <div class="col-md-3">
+          <input disabled type="number" name="plant" class="form-control"  required   [(ngModel)]="delsch.DelPlant" >
+        </div>
+        <label class="col-md-3 col-form-label" for="text-input"><b>Delivery Location:</b></label>
+        <div class="col-md-3">
+          <input disabled type="number" name="location" class="form-control"  required   [(ngModel)]="delsch.DelStLoc" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label" for="text-input"><b>Vendor Number:</b></label>
+        <div class="col-md-3">
+          <input disabled type="text" name="lifnr" class="form-control"  required   [(ngModel)]="delsch.lifnr" >
+        </div>
+        <label class="col-md-3 col-form-label" for="text-input"><b>SubCont:</b></label>
+        <div class="col-md-3">
+          <input type="text" name="subcont" class="form-control"  disabled   [(ngModel)]="delsch.BSVendor" >
+        </div>
+      </div> -->
+    
+    </form>
+  </div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button"  class="btn color1" (click)="bsModalRef.hide()"><b>Close</b></button>
+<button type="button" [disabled]="menuForm.invalid" class="btn color" (click)="submit(detail)">Save</button>
+</div>

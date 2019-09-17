@@ -1,0 +1,49 @@
+
+<div class="header-container"
+     [class.left]="position === 'normal'"
+     [class.right]="position === 'inverse'">
+  <div class="col-md-4 logo-containter">
+      <a (click)="toggleSidebar()" href="#" class="navigation"><i class="nb-menu"></i></a>
+      <!-- <div class="logo" (click)="goToHome()"><img width="200" height="50"   src="../assets/images/logo.jpg"></div> -->
+    </div> 
+</div>
+<div class="col-md-3"></div>
+<div class="col-md-4 top">
+    <!-- <select required  id="vendor" name="vendor" class="form-control" [(ngModel)]="lifnr" (change)="Onchange()">
+      <option disabled [ngValue]="undefined" >Select Vendor</option>
+      <option *ngFor="let vendor of accessibleVendors"  [ngValue]="vendor.lifnr">{{vendor.name1}}  {{vendor.lifnr}}</option> 
+  </select> -->
+  </div>
+
+<div class="header-container">
+  <!-- <ngx-layout-direction-switcher></ngx-layout-direction-switcher> -->
+  <nb-actions
+    size="medium"
+    [class.right]="position === 'normal'"
+    [class.left]="position === 'inverse'">
+    <nb-action class="control-item">
+      <nb-search type="rotate-layout" (click)="startSearch()"></nb-search>
+    </nb-action>
+  </nb-actions>
+</div>
+<div class="col-md-2">
+<div class="nav-item dropdown">
+    <button class="btn btn-primary dropdown-toggle drpcolor" type="button" data-toggle="dropdown">
+        <img width="50" height="40"   src="../assets/images/avtar.png">
+    <span class="caret">{{UserName.username}}</span></button>
+    <ul class="dropdown-menu color">
+        <!-- <a class="dropdown-item"  (click)="getUserProfile()"> <i class="fa fa-user"></i> Profile</a> -->
+        <!-- <a class="dropdown-item" (click)="logout()"> <i class="fa fa-lock"></i> Logout</a> -->
+    </ul>
+  </div>
+
+  </div>
+  <div *ngIf="showLoader" style="    height: -webkit-fill-available;
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  background: rgba(0,0,0,0.8);
+  z-index: 10000;">
+  <h1 style="margin-top: 300px;margin-left:48%;color:white"><i class="fa fa-spinner fa-spin" style="font-size:68px;color:red"></i> Please Wait....</h1> 
+</div>

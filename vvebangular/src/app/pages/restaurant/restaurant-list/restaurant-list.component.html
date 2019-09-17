@@ -1,0 +1,64 @@
+<div class="card body">
+  <div class="row">
+    <div class="col-md-10">
+      <strong>
+        <h4>Restaurant List </h4>
+      </strong>
+    </div>
+    <div class="col-md-2">
+     
+        <button class="button" (click)="OpenWithComponent()">Create</button>
+    </div>
+  </div>
+  <div class="row  mt-4">
+    <div class="col-md-4">
+       
+    </div>
+  
+    <div class="col-md-4">
+      
+  </div>
+    <div class="col-md-4">
+      <input *ngIf="config.filtering" placeholder="Filter all columns" [ngTableFiltering]="config.filtering"
+        class="form-control" (tableChanged)="onChangeTable(config)" />
+    </div>
+  </div>
+  
+  
+  <br>
+  
+  <ng-table class="small_font" 
+          [config]="config" 
+          (tableChanged)="onChangeTable(config)" 
+          (cellClicked)="onCellClick($event)" 
+          [rows]="rows"
+          [columns]="columns">
+  </ng-table>
+  
+  <nav aria-label="...">
+    <ul class="pagination">
+      <li class="page-item ">
+        <a class="page-link" tabindex="-1" (click)="loadPrevPageGroup()">Previous</a>
+      </li>
+      <li *ngFor="let pageNo of noOfPages" class="page-item">
+        <a class="page-link" (click)="fetchPage(pageNo)">{{pageNo}}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" (click)="loadNextPageGroup()">Next</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- <div class="row">
+  <div class="col-md-6 col-form-label" >
+      <label class="col-md-4 col-form-label" for="text-input"><strong><h5>Select Items</h5></strong></label>
+      <div class="col-md-2 col-form-label" >
+      
+      </div>
+      
+  </div>
+  
+  </div> -->
+  
+  
+  <pre *ngIf="config.paging" class="card card-block card-header">Page: {{page}} / {{numPages}}</pre>
+  </div>
