@@ -29,7 +29,7 @@
     "passport-jwt": "*",
     "request": "^2.88.0",
     "reverse-md5": "0.0.4",
-    "scramjet": "^4.22.1"
+    "scramjet": "^4.36.9"
   },
   "author": "Zencon",
   "license": "ISC"
